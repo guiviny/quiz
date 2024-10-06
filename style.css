@@ -43,17 +43,34 @@ h1 {
     width: 80%;
 }
 
-.imgAlternatives{
+.imgAlternatives {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .alternative{
     cursor: pointer;
-    width: 600px;
-    height: auto;
+    width: 23rem;
+    height: 23rem;
     border: 4px solid rgba(230, 230, 5, 0.455);
     border-radius: 10px;
+    object-fit: contain;
+}
+
+@media (max-width: 678px) {
+    .imgAlternatives {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 2rem;
+    }
+    .alternative {
+        width: 12rem;
+        height: 12rem;
+    }
 }
 
 .question {
