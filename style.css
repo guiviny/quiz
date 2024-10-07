@@ -60,6 +60,26 @@ h1 {
     object-fit: contain;
 }
 
+.options{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: yellow;   
+}
+
+.options p{
+    border: 1px solid yellow;
+    border-radius: 20px;
+    padding: 9px;
+    background-color: black;
+}
+
+
+
 @media (max-width: 678px) {
     .imgAlternatives {
         display: grid;
@@ -83,9 +103,6 @@ h1 {
     margin: 20px 0;
     background-color: rgba(255, 255, 0, 0.232);
 }
-
-
-
 
 .alternative:hover {
     box-shadow: 7px 7px 20px yellow;

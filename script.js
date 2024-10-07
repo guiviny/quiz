@@ -22,18 +22,19 @@ function mostrarPergunta() {
         document.querySelector('.progress--bar').style.width = `${pct}%`;
 
         let imagens = '';
-
+        let alternatives = ''
         // Gera as opções de imagem para a pergunta atual
         for (let i in q.options) {
             imagens += `<img src="img/java${parseInt(i)}q${codQuestionImg}.png" class="alternative" data-op="${parseInt(i) + 1}" alt="">`;
+            alternatives += `<p clas="alternativa${i}">${questions[questaoAtual].options[i]}</p>`;
         }
         
         // Incrementa o código da imagem para as próximas questões
         codQuestionImg++;
-
+        
         // Insere as imagens na área de alternativas
         document.querySelector('.imgAlternatives').innerHTML = imagens;
-
+        document.querySelector('.options').innerHTML = alternatives;
         // Adiciona eventos de clique em cada alternativa
         document.querySelectorAll('.imgAlternatives .alternative').forEach(option => {
             option.addEventListener('click', optionClickEvent);
