@@ -77,5 +77,14 @@ let questions = [
         ],
         answer: 1
     },
-        
+       
+    {
+        //questão 8
+        question: 'Qual dessa linguagem é Orientada a Objeto?',
+        options: [
+            'a) ',
+            'b)' 
+        ],
+        answer: 2
+    },
 ];

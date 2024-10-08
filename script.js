@@ -25,8 +25,8 @@ function mostrarPergunta() {
         let alternatives = ''
         // Gera as opções de imagem para a pergunta atual
         for (let i in q.options) {
-            imagens += `<img src="img/java${parseInt(i)}q${codQuestionImg}.png" class="alternative" data-op="${parseInt(i) + 1}" alt="">`;
-            alternatives += `<p clas="alternativa${i}">${questions[questaoAtual].options[i]}</p>`;
+            imagens += `<div class="divIMG${i}"> <p clas="alternativa${i}">${questions[questaoAtual].options[i]}</p> <img src="img/java${parseInt(i)}q${codQuestionImg}.png" class="alternative" data-op="${parseInt(i) + 1}" alt=""></div>`;
+            
         }
         
         // Incrementa o código da imagem para as próximas questões
